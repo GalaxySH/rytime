@@ -36,7 +36,7 @@ body {
 /* Timeline Container */
 .timeline {
     /* background: var(--primary-color); */
-    margin: 0 20px auto;
+    margin: 0 auto;
     padding: 0 20px 20px 20px;
 }
 
@@ -82,11 +82,10 @@ body {
 }
 
 /* Removing the border if it is the first card */
-.card:first-child::before {
-    /* z-index: 2; */
+/* .card:first-child::before {
     border-top: 0;
     border-top-left-radius: 0;
-}
+} */
 
 .card:first-child::after {
     z-index: 1;
@@ -167,4 +166,58 @@ body {
 /* setting dot to the right if the card is odd */
 .card:nth-child(even)>.info>.title::before {
     right: -45px;
+}
+
+/* Bio container */
+.bio {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 0 auto;
+    padding: 20px 20px 20px 20px;
+    background: #333;
+    color: gray;
+    border-radius: 50px;
+}
+
+.biotitle {
+    color: orangered;
+    position: relative;
+}
+
+.biotext {
+    border-radius: 10px;
+    padding: 10px;
+    /* width: 90%; */
+}
+
+.bio::before {
+    content: "";
+    position: absolute;
+    /* width: 50%; */
+    width: 50%;
+    border: solid orangered;
+
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    border-width: 5px 0 5px 5px;
+    /* border-width: 5px 5px 5px 5px; */
+    border-radius: 50px 0 0 50px;
+    /* border-radius: 50px 50px 50px 50px; */
+}
+
+.bio::after {
+    content: "";
+    position: absolute;
+    /* width: 50%; */
+    width: 98%;
+    border: solid orangered;
+
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    /* border-width: 5px 0 5px 5px; */
+    border-width: 5px 5px 5px 5px;
+    /* border-radius: 50px 0 0 50px; */
+    border-radius: 50px 50px 50px 50px;
 }
