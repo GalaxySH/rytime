@@ -43,7 +43,7 @@ body {
 /* Card container */
 .card {
     position: relative;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 /* setting padding based on even or odd */
@@ -171,7 +171,7 @@ body {
 /* Bio container */
 .bio {
     position: relative;
-    max-width: 400px;
+    max-width: 450px;
     margin: 0 auto 0 auto;
     padding: 20px 20px 20px 20px;
     background: #333;
@@ -190,10 +190,9 @@ body {
     /* width: 90%; */
 }
 
-.bio::before {
+/* .bio::before {
     content: "";
     position: absolute;
-    /* width: 50%; */
     width: 50%;
     border: solid orangered;
 
@@ -201,16 +200,14 @@ body {
     top: 0px;
     bottom: 0px;
     border-width: 5px 0 5px 5px;
-    /* border-width: 5px 5px 5px 5px; */
     border-radius: 50px 0 0 50px;
-    /* border-radius: 50px 50px 50px 50px; */
-}
+} */
 
-.bio::after {
-    content: "";
-    position: absolute;
+.bio {
+    /* content: ""; */
+    /* position: absolute; */
     /* width: 50%; */
-    width: 98%;
+    /* width: 98%; */
     border: solid orangered;
 
     left: 0px;
@@ -220,4 +217,13 @@ body {
     border-width: 5px 5px 5px 5px;
     /* border-radius: 50px 0 0 50px; */
     border-radius: 50px 50px 50px 50px;
+}
+
+/* p lower margin */
+/* .info p.ppad {
+    margin-bottom: 10px;
+} */
+
+.info > p:not(:first-of-type) {
+    margin-top: 10px;
 }
